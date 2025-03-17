@@ -1,0 +1,12 @@
+.pagination
+{
+  justify-content: center;
+}
+.btn-pagination{
+  margin:8px;
+  border: none;
+ background: none;
+}
+.pagination-text{
+  padding-top: 10px;
+}

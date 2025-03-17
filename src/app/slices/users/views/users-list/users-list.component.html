@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-12">
+     <div class="wrapper">
+
+      <user-card 
+            *ngFor="let user of (users |async)?.data" 
+            [user]="user"
+            [routerLink]="'details/'+user.id">
+         
+      </user-card>
+      <div *ngIf="(users | async)?.data?.length == 0">
+        <empty-result 
+            [message]="'No users found'"
+            [descrption]="'Try searching with different criteria or check back later.'"
+        >
+
+        </empty-result>
+      </div>
+
+      <pagination
+        [currentPage]="currentPage"
+        [itemsPerPage]="(users |async)?.per_page || 0"
+        [totalItems]="(users |async)?.total || 0"
+        (next)="goToNextPage($event)"
+        (previous)="goToPreviousPage($event)"
+      ></pagination>
+     </div>
+ 
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="user-card card" [routerLink]="'details/'+user.id">
+    <div class="user-card-body d-flex align-items-center">
+        <!-- User Avatar -->
+        <div class="avatar-container">
+            <img [src]="user.avatar" alt="User Avatar" class="user-avatar">
+            <span class="status-indicator" [ngClass]="online ? 'online' : 'offline'"></span>
+        </div>
+
+        <!-- User Details -->
+        <div class="user-info">
+            <h5 class="user-name">{{ user | fullname }}</h5>
+            <p class="user-email">
+                <i class="fas fa-envelope"></i> {{ user.email }}
+            </p>
+            <p class="user-status">
+                <i class="fas" [ngClass]="online ? 'fa-circle text-success' : 'fa-circle text-danger'"></i>
+                {{ online ? 'Online' : 'Offline' }}
+            </p>
+        </div>
+    </div>
+</div>

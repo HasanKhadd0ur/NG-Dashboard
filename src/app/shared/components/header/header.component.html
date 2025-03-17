@@ -1,0 +1,71 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm">
+      <div class="navbar-brand">{{appName}}</div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse fxs-3" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/']"><strong>HOME</strong></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/aboutus']"><strong>ABOUT US</strong></a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <strong>PROFILE </strong>
+                </a>
+                <ul class="dropdown-menu fxs-3">
+                    <li >
+                        <a class="dropdown-item" itemPointer [routerLink]="['/auth']">
+                            <strong>LOG IN</strong>
+                        </a>
+                    </li>
+                    <li >
+                        <a class="dropdown-item" itemPointer [routerLink]="['/recipes/myrecipes']"><strong>MY
+                                RECIPES</strong></a>
+                    </li>
+                    <li >
+                        <a class="dropdown-item" itemPointer [routerLink]="['/user']">
+                            <strong>ACCOUNT</strong>
+                        </a>
+                    </li>
+                    <li >
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li >
+                        <a class="dropdown-item">
+                            <strong>LOG OUT</strong>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        
+          </ul>
+      </div>
+  </nav>
+
+    <form class="d-flex input-group w-auto" >
+      <input
+        [(ngModel)]="searchTerm" 
+        name="searchTerm"
+        type="search"
+        class="form-control rounded"
+        placeholder="Search by User ID"
+        aria-label="Search"
+        (keyup)="onSearch($event)"
+
+        />
+      <!-- <span class="input-group-text border-0" id="search-addon"
+            (click)="onSearch()"
+        >
+        <i class="fas fa-search"></i>
+      </span> -->
+    </form>
+  </div>
+</nav>
