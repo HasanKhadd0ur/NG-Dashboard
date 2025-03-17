@@ -1,8 +1,17 @@
-<mat-toolbar color="primary">
-    <span>Bank CPanel</span>
-    
-    <div class="pages">
-        <button mat-button routerLink="/users/user-listing">User Listing</button>
-        <button mat-button routerLink="/users/add-edit/0">Add / Edit User</button>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">{{appName}}</a>
+      <form class="d-flex input-group w-auto">
+        <input
+          type="search"
+          type="search"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+      </form>
     </div>
-</mat-toolbar>
+</nav>

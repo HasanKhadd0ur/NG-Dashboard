@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../../../core/config/config.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  
+  appName : string;
 
-  constructor() { }
+  constructor(private config : ConfigService) { 
+    this.appName = this.config.applicationName;
+
+  }
 
   ngOnInit(): void {
   }
