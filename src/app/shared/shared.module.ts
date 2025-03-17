@@ -8,7 +8,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { EmptyResultComponent } from './components/empty-result/empty-result.component';
-import { PaginationComponent } from './pagination/pagination.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 
 
