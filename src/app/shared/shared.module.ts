@@ -7,8 +7,8 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { LoaderComponent } from './components/loader/loader.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { PaginationComponent } from './components/pagination/pagination.component';
 import { EmptyResultComponent } from './components/empty-result/empty-result.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 
