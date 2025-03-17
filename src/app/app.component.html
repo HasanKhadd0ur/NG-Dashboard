@@ -1,19 +1,5 @@
-<div class="app-container">
-  <!-- Header Section -->
-  <header class="app-header">
-    <mat-toolbar color="primary">
-      <span>{{ title }}</span>
-      <mat-form-field class="search-field">
-        <input matInput placeholder="Search by ID" [(ngModel)]="searchQuery">
-        <button mat-icon-button matSuffix>
-          <mat-icon>search</mat-icon>
-        </button>
-      </mat-form-field>
-    </mat-toolbar>
-  </header>
-
-  <!-- Main Content Section with Router Outlet -->
-  <main>
-    <router-outlet></router-outlet> <!-- Used for routing between pages -->
-  </main>
-</div>
+<app-main-layout>
+  <!-- Content of the page goes here -->
+  <h1>Welcome to My Angular App</h1>
+  <p>This is the main content area of the page.</p>
+</app-main-layout>
