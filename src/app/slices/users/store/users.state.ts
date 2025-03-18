@@ -2,8 +2,7 @@ import { PaginatedResult } from "../../../core/models/PaginatedResult";
 import { User } from "../models/user";
 
 export interface UsersState{
-users: PaginatedResult<User>;
-filteredUsers:PaginatedResult<User>;
+    users: PaginatedResult<User>;
 }
 export const initialState : UsersState = {
     users : {
@@ -12,14 +11,7 @@ export const initialState : UsersState = {
         per_page: 6,
         total: 0,
         total_pages: 0,
-    },
-    filteredUsers: {
-        data: [],
-        page: 0,
-        per_page: 6,
-        total: 0,
-        total_pages: 0,
-      },
+    }
 }
 
 export interface SingleUserState{
@@ -33,4 +25,4 @@ export const initialUserState : SingleUserState = {
             last_name: '',
             avatar: '',
         }
-    }
+}

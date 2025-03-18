@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { EmptyResultComponent } from './components/empty-result/empty-result.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
-
+import { HoverCardDirective } from './directives/hover-card/hover-card.directive';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     MainLayoutComponent,
     LoaderComponent,
     PaginationComponent,
-    EmptyResultComponent
+    EmptyResultComponent,
+    NotfoundComponent
+
   ],
   imports: [
     CommonModule,
@@ -32,7 +35,9 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     FooterComponent,
     MainLayoutComponent,
     PaginationComponent,
-    EmptyResultComponent
+    EmptyResultComponent,
+    NotfoundComponent
+  
   ],
 })
 export class SharedModule { }

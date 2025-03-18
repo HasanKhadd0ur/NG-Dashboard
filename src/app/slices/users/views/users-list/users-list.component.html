@@ -5,7 +5,8 @@
       <user-card 
             *ngFor="let user of (users |async)?.data" 
             [user]="user"
-            [routerLink]="'details/'+user.id">
+            [routerLink]="'details/'+user.id"
+            >
          
       </user-card>
       <div *ngIf="(users | async)?.data?.length == 0">

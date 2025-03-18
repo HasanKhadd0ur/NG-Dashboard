@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { FullnamePipe } from "../../shared/pipes/fullname/fullname.pipe";
 import { SharedModule } from '../../shared/shared.module';
 import { UserRowComponent } from './components/user-row/user-row.component';
+import { HoverCardDirective } from '../../shared/directives/hover-card/hover-card.directive';
 
 const routes: Routes = [
   {
@@ -45,7 +46,8 @@ const routes: Routes = [
     MatPaginator,
     SharedModule,
     MatPaginatorModule,
-    FullnamePipe
+    FullnamePipe,
+    HoverCardDirective
 ]
 })
 export class UsersModule { }
