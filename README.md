@@ -1,59 +1,110 @@
-# Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+## **📌 Angular Dashboard Project**  
 
-## Development server
+### **📜 Table of Contents**  
+- [📌 Angular DashboardProject](#-angular-dashboaard-project)  
+- [📜 Table of Contents](#-table-of-contents)  
+- [📦 Project Structure](#-project-structure)  
+- [🚀 Getting Started](#-getting-started)  
+- [📌 Available Scripts](#-available-scripts)  
+- [🌍 Deployment](#-deployment)  
+- [📜 License](#-license)  
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## **📦 Project Structure**  
+```plaintext
+.
+├── dist/                # Production build output
+├── node_modules/        # Dependencies
+├── public/              # Public assets
+├── src/                 # Source code
+│    ├── app/            
+│    │   ├── core/         # Core module (config, services, guards, interceptors, constants)
+│    │   │   ├── config/   # Configuration settings
+│    │   │   ├── services/ # Common services (Auth, Storage, Caching)
+│    │   │   ├── guards/   # Route guards for authentication and authorization
+│    │   │   ├── interceptors/ # HTTP interceptors (e.g., JWT)
+│    │   │   ├── constants/ # Global constants
+│    │   ├── slices/  
+│    │   │   ├── users/    # Users module (services, models, store, views)
+│    │   │   │   ├── models/  
+│    │   │   │   ├── services/ 
+│    │   │   │   ├── store/  
+│    │   │   │   ├── components/ 
+│    │   │   │   └── views/ # Global constants
+│    │   │   └──...
+│    │   │     
+│    │   ├── shared/       # Shared module (components, directives, pipes)
+│    ├── environments/    # Environment configurations
+│    ├── main.ts          # Main entry point
+│    ├── index.html       # Main HTML file
+│    ├── styles.scss      # Global styles
+│    ├── app.module.ts    # Root module
+│    └── ...              
+├── .editorconfig        # Code formatting rules
+├── .gitignore           # Git ignore rules
+├── angular.json         # Angular CLI configuration
+├── package.json         # Dependencies and scripts
+├── package-lock.json    # Dependency lock file
+├── tsconfig.app.json    # TypeScript app configuration
+├── tsconfig.json        # TypeScript configuration
+├── tsconfig.spec.json   # TypeScript test configuration
+└── README.md            # This file
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## **🚀 Getting Started**  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+### **📥 1. Install Dependencies**  
+Make sure you have **Node.js** and **npm** installed. Then run:  
+```sh
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### **🛠️ 2. Start Development Server**  
+To start the project locally, run:  
+```sh
+npm start
+```
+This will start a development server at `http://localhost:4200/`.
 
-```bash
-ng generate --help
+---
+
+## **📌 Available Scripts**  
+
+| Command               | Description                                      |
+|-----------------------|--------------------------------------------------|
+| `npm start`          | Runs the app in development mode (`ng serve`)     |
+| `npm run build`      | Builds the app for production (`ng build`)        |
+| `npm run test`       | Runs unit tests (`ng test`)                       |
+| `npm run lint`       | Checks for linting issues (`ng lint`)             |
+
+---
+
+## **🌍 Deployment**  
+
+You can deploy your Angular project to **GitHub Pages** using the following steps:
+
+### **1. Install Angular CLI GitHub Pages Deploy Package**
+```sh
+npm install -g angular-cli-ghpages
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
+### **2. Build the Project for Production**
+```sh
+ng build --configuration production --base-href "https://your-username.github.io/your-repo-name/"
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+### **3. Deploy to GitHub Pages**
+```sh
+npx angular-cli-ghpages --dir=dist/your-project-name
 ```
+After this, your project will be live on:  
+🔗 `https://your-username.github.io/your-repo-name/`
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## **📜 License**  
+This project is licensed under the **MIT License**.  
