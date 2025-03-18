@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { EmptyResultComponent } from './components/empty-result/empty-result.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { HoverCardDirective } from './directives/hover-card/hover-card.directive';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HoverCardDirective } from './directives/hover-card/hover-card.directive
     MainLayoutComponent,
     LoaderComponent,
     PaginationComponent,
-    EmptyResultComponent
+    EmptyResultComponent,
+    NotfoundComponent
 
   ],
   imports: [
@@ -33,7 +35,9 @@ import { HoverCardDirective } from './directives/hover-card/hover-card.directive
     FooterComponent,
     MainLayoutComponent,
     PaginationComponent,
-    EmptyResultComponent
+    EmptyResultComponent,
+    NotfoundComponent
+  
   ],
 })
 export class SharedModule { }
