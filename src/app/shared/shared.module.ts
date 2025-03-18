@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { EmptyResultComponent } from './components/empty-result/empty-result.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
-
+import { HoverCardDirective } from './directives/hover-card/hover-card.directive';
 
 
 @NgModule({
@@ -20,6 +20,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     LoaderComponent,
     PaginationComponent,
     EmptyResultComponent
+
   ],
   imports: [
     CommonModule,
