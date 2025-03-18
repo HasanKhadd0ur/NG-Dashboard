@@ -5,6 +5,7 @@
 - [📌 Angular DashboardProject](#-angular-dashboaard-project)  
 - [📜 Table of Contents](#-table-of-contents)  
 - [📦 Project Structure](#-project-structure)  
+- [🛠 Architecture - Vertical Slice](#-architecture---vertical-slice)  
 - [🚀 Getting Started](#-getting-started)  
 - [📌 Available Scripts](#-available-scripts)  
 - [🌍 Deployment](#-deployment)  
@@ -52,6 +53,28 @@
 ├── tsconfig.spec.json   # TypeScript test configuration
 └── README.md            # This file
 ```
+---
+
+## **🛠 Architecture - Vertical Slice**  
+This project follows the **Vertical Slice Architecture**, where each feature (or "slice") is structured as a **self-contained unit** rather than being separated into generic layers.  
+
+### **✅ Benefits of Vertical Slice Architecture**  
+- **Encapsulation:** Each slice contains everything needed for that feature (UI, services, state management).  
+- **Scalability:** New features can be added without affecting existing ones.  
+- **Better Code Organization:** Instead of grouping by technical concerns (e.g., all services together), features are grouped together, making them easier to navigate and maintain.  
+
+### **📌 Example - Users Feature**  
+Each feature has its own folder with all related files:
+```plaintext
+slices/
+│── users/              
+│   ├── models/       # User-related TypeScript interfaces/models
+│   ├── services/     # API calls and business logic for users
+│   ├── store/        # NgRx store files for user state management
+│   ├── components/   # UI components specific to users
+│   └── views/        # User pages or views
+```
+This structure makes it **easier to work on individual features** without affecting the rest of the application.
 
 ---
 
