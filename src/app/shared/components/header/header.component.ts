@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../../../core/config/config.service';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../core/store/app.state';
-import { clearSearch, searchUsersById } from '../../../slices/users/store/users.actions';
+import { clearSearch, loadUsers, searchUsersById } from '../../../slices/users/store/users.actions';
 
 @Component({
   selector: 'app-header',
@@ -32,7 +32,9 @@ export class HeaderComponent implements OnInit {
       const userId = +this.searchTerm; // Convert search term to a number
       if( event.key === 'Backspace'){
         
-        this.store.dispatch(clearSearch());  // Dispatch the clear search action
+        
+      this.store.dispatch(loadUsers({page:1})); 
+        // this.store.dispatch(clearSearch());  // Dispatch the clear search action
         this.store.dispatch(searchUsersById({ userId: userId.toString() }))
       }else  if (!isNaN(userId)) {
         // Dispatch the action to search users by ID
@@ -42,7 +44,7 @@ export class HeaderComponent implements OnInit {
     } else {
       console.log(2);
        
-      this.store.dispatch(clearSearch());  // Dispatch the clear search action
+      this.store.dispatch(loadUsers({page:1}));  // Dispatch the clear search action
     }
   }
 
